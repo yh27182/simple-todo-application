@@ -40,12 +40,14 @@ function addTask(title) {
  * false    |   true
  */
 function onUpdateIsDone(task) {
-    console.log("チェックボックスがクリックされました。", task);
-
+    
+task_isdone=!task_isdone
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
-    const currentValue = task.isDone;
-    task.isDone = currentValue;
-
+    //const currentValue = task.isDone;
+   // task.isDone = currentValue;
+    
+    console.log("チェックボックスがクリックされました。", task);
+    
     return task;
 }
 
@@ -64,11 +66,13 @@ function onUpdateIsDone(task) {
  * false    |   true
  */
 function onTaskTitleClicked(task) {
-    console.log("タイトルがクリックされました。", task);
-
+    
+   console.log("タイトルがクリックされました。", task);
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
     const currentValue = task.isDone;
     task.isDone = currentValue;
-
+    
+    
+    
     return task;
 }
